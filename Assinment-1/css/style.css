@@ -137,3 +137,31 @@ ul {
   font-size: 16px;
   color: #627382;
 }
+.cards {
+  max-width: 1360px;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+.card {
+  background-color: #faf9f9;
+  height: 300px;
+  width: 300px;
+  padding: 69px 24px;
+}
+.card img {
+  padding: 30px;
+  border-radius: 50%;
+  background-color: #f95555;
+}
+.cards h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #001931;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.cards p {
+  font-size: 16px;
+  color: #627382;
+}
