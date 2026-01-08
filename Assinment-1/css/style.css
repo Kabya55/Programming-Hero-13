@@ -57,6 +57,9 @@ ul {
   font-weight: medium;
   font-family: "Inter", sans-serif;
 }
+.nav-links li a:hover {
+  color: #30b868;
+}
 
 /* Banner Part */
 .banner {
@@ -228,5 +231,47 @@ ul {
   font-size: 16px;
   margin: 24px;
   color: #627382;
+  font-family: "Inter", sans-serif;
+}
+/* Footer Part */
+.footer-Part {
+  background-color: #001931;
+  padding: 60px 120px;
+}
+.social {
+  max-width: 1360px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.social-icon p {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-family: "Inter", sans-serif;
+}
+.icon li {
+  margin-right: 10px;
+}
+.icon li a {
+  color: black;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+.copyright {
+  text-align: center;
+  margin-top: 80px;
+}
+.line {
+  max-width: 1360px;
+  margin: 0 auto;
+  border: 1px solid #052747;
+  margin-bottom: 30px;
+}
+.copyright p {
+  color: #ffffff;
+  font-size: 16px;
   font-family: "Inter", sans-serif;
 }
