@@ -3,3 +3,137 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+}
+ol,
+ul {
+  list-style-type: none;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+}
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn {
+  background-color: #30b868;
+  border-color: #30b868;
+  color: #ffffff;
+  padding: 9px 17px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #27a05f;
+  border-color: #27a05f;
+  color: #ffffff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 120px;
+  background-color: #f1f1f1;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: center;
+}
+.nav-links li a {
+  color: #353535;
+  display: block;
+  padding: 15px 7.5px;
+  font-size: 16px;
+  font-weight: medium;
+  font-family: "Inter", sans-serif;
+}
+
+/* Banner Part */
+.banner {
+  background-image: url(../picture/hero-bg.png);
+  padding: 115px 120px 179px 120px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.early {
+  background-color: #ffffff;
+  max-width: 229px;
+  border-radius: 30px;
+  padding: 10px 10px;
+  margin: 0 auto;
+}
+.early img {
+  margin-right: 10px;
+}
+.early p {
+  color: #30b868;
+  font-weight: medium;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+.banner h1 {
+  font-size: 72px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-family: "Inter", sans-serif;
+}
+.banner h1 span {
+  color: #30b868;
+}
+.banner-p {
+  font-size: 18px;
+  color: #f1f1f1;
+  margin-bottom: 32px;
+  font-family: "Inter", sans-serif;
+}
+.banner-btn {
+  margin: 0 auto;
+  display: inline-block;
+  gap: 16px;
+}
+.imgGap {
+  margin-left: 10px;
+}
+.btn1 {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 9px 17px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.btn1:hover {
+  background-color: #30b868;
+}
+.img-gap {
+  margin-right: 10px;
+}
+/* Notes */
+.notes {
+  padding: 100px 120px;
+  text-align: center;
+}
+.notes h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #001931;
+  margin-bottom: 24px;
+}
+.notes p {
+  font-size: 16px;
+  color: #627382;
+}
