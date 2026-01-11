@@ -1,0 +1,51 @@
+.containner > * {
+  padding: 20px;
+  border: 3px solid #0000006b;
+  gap: 20px;
+}
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+#advertising {
+  grid-area: advertising;
+}
+footer {
+  grid-area: footer;
+}
+.containner {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "nav main main aside"
+    "nav main main advertising"
+    "footer footer footer footer";
+}
+@media screen and (max-width: 576px) {
+  .containner {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "advertising"
+      "footer";
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .containner {
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "aside main main"
+      "advertising footer footer";
+  }
+}
