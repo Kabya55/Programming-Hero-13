@@ -459,3 +459,46 @@
   border-radius: 50%;
 }
 /* Host CSS End */
+
+/* Footer CSS Start */
+.footer_wrapper {
+  background: url(../images/footer-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+
+.footer_content .footer_logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.footer_menu ul {
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+}
+.footer_menu ul li a {
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.footer_copyright {
+  text-align: center;
+  margin-top: 40px;
+}
+.footer_copyright p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+}
+/* Footer CSS End */
