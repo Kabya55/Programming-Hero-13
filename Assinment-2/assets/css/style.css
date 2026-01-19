@@ -9,6 +9,7 @@
 
 :root {
   --primary-bg-color: #1a0b2e;
+  --secondary-bg-color: #230e3d;
   --primary-text-color: #00ff88;
   --secondary-text-color: #fff;
 }
@@ -234,3 +235,116 @@
   text-align: center;
 }
 /* About Podcast CSS End */
+
+/* Choose us CSS Start */
+.choose_us_wrapper {
+  background-color: var(--secondary-bg-color);
+  padding: 100px 0;
+}
+
+.choose_us_content h1 {
+  color: #fff;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.choose_us_content_f_card {
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.choose_us .choose_us_content_audio_card {
+  width: 40%;
+  background-color: #2a0f4d;
+  padding: 40px 30px;
+  border-radius: 40px;
+}
+.choose_us_content_f_card img {
+  margin-bottom: 20px;
+}
+.choose_us_content_f_card h2 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+}
+.choose_us_content_f_card h4 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+}
+.choose_us_content_friendly_card_content {
+  width: 60%;
+}
+.mobile_friendly_card,
+.mobile_community_card {
+  background-color: #2a0f4d;
+  padding: 40px 30px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+
+.choose_us_content_s_card {
+  margin-top: 20px;
+  gap: 20px;
+}
+.choose_us_content_resource_card_content img,
+.choose_us_content_interview_card img {
+  margin-bottom: 20px;
+}
+.choose_us_content_interview_card {
+  width: 60%;
+  background-color: #2a0f4d;
+  padding: 40px 30px;
+  border-radius: 40px;
+}
+.choose_us_content_interview_card h2 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+}
+.choose_us_content_interview_card h4 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+}
+
+.choose_us_content_resource_card_content {
+  width: 40%;
+  background-color: #2a0f4d;
+  padding: 40px 30px;
+  border-radius: 40px;
+}
+.choose_us_content_resource_card_content h2 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+}
+.choose_us_content_resource_card_content h4 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+}
+/* Choose us CSS End */
