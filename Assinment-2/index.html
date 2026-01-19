@@ -1,94 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechWave - Podcast Website</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-2</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <!-- Header Section Start -->
-     <div class="header_wrapper">
-        <header class="container d-flex header">
-            <!-- <h1>Tech<span>Wave</span></h1> -->
-            <img src="./assets/images/TechWave.png" alt="TechWave">
-            <nav class="nav_menu">
-                <ul class="d-flex">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Episodes</a></li>
-                    <li><a href="#">Host</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="header_btn">Subscribe <i class="fa-solid fa-arrow-right"></i> </button>
-        </header>
+    <div class="header_wrapper">
+      <header class="container d-flex header">
+        <h1>Tech<span>Wave</span></h1>
+        <!-- <img src="./assets/images/TechWave.png" alt="TechWave" /> -->
+        <nav class="nav_menu">
+          <ul class="d-flex">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Episodes</a></li>
+            <li><a href="#">Host</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="header_btn">
+          Subscribe <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </header>
     </div>
     <!-- Header Section End -->
 
     <!-- Hero Section Start -->
     <section class="hero_wrapper">
-        <div class="container hero">
-            <div class="hero_img position-relative">
-                <img src="./assets/images/hero-circle.png" alt="hero">
-                <img class="position-absolute hero_micro" src="./assets/images/microphone.png" alt="microphone">
-                <span class="position-absolute hero_new_btn">New</span>
-            </div>
-            <div class="hero_content">
-                <h1>TechWave</h1>
-                <p>Your daily dose of tech insights, productivity hacks, and personal growth</p>
-                <div class="hero_btns">
-                    <button class="spotify_btn"><i class="fa-brands fa-spotify"></i> Listen on Spotify</button>
-                    <button class="subscribe_btn"> <i class="fa-regular fa-envelope"></i> Subscribe </button>
-                </div>
-            </div>
+      <div class="container hero">
+        <div class="hero_img position-relative">
+          <img src="./assets/images/hero-circle.png" alt="hero" />
+          <img
+            class="position-absolute hero_micro"
+            src="./assets/images/microphone.png"
+            alt="microphone"
+          />
+          <span class="position-absolute hero_new_btn">New</span>
         </div>
+        <div class="hero_content">
+          <h1>TechWave</h1>
+          <p>
+            Your daily dose of tech insights, productivity hacks, and personal
+            growth
+          </p>
+          <div class="hero_btns">
+            <button class="spotify_btn">
+              <i class="fa-brands fa-spotify"></i> Listen on Spotify
+            </button>
+            <button class="subscribe_btn">
+              <i class="fa-regular fa-envelope"></i> Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Hero Section End -->
 
     <!-- About Podcast Section Start -->
     <section class="about_podcast_wrapper">
-        <div class="container about_podcast">
-            <div class="about_podcast_content">
-                <h1>About the Podcast</h1>
-                <p>TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.
-                We break down complex topics into digestible insights, explore productivity strategies that actually work,
-                and share stories of personal growth from industry leaders.
-                </p>
-                <p>
-                    Join thousands of young professionals and tech enthusiasts who start their day with TechWave.
-                </p>
-            </div>
+      <div class="container about_podcast">
+        <div class="about_podcast_content">
+          <h1>About the Podcast</h1>
+          <p>
+            TechWave is your go-to podcast for staying ahead in the fast-paced
+            world of technology. We break down complex topics into digestible
+            insights, explore productivity strategies that actually work, and
+            share stories of personal growth from industry leaders.
+          </p>
+          <p>
+            Join thousands of young professionals and tech enthusiasts who start
+            their day with TechWave.
+          </p>
         </div>
-        <div class="container rating_review">
-            <div class="rating_review_content">
-                <div class="rating_review_count d-flex">
-                    <div class="monthly_listeners">
-                        <h1>150K+</h1>
-                        <h5>Monthly Listeners</h5>
-                    </div>
-                    <div class="episode_publidhed">
-                        <h1>200+</h1>
-                        <h5>Episodes Published</h5>
-                    </div>
-                    <div class="avarage_rating">
-                        <h1>4.9 <i class="fa-solid fa-star"></i></h1>
-                        <h5>Average Rating</h5>
-                    </div>
-                    <div class="industry_experts">
-                        <h1>30+</h1>
-                        <h5>Industry Experts</h5>
-                    </div>
-                </div>
+      </div>
+      <div class="container rating_review">
+        <div class="rating_review_content">
+          <div class="rating_review_count d-flex">
+            <div class="monthly_listeners">
+              <h1>150K+</h1>
+              <h5>Monthly Listeners</h5>
             </div>
+            <div class="episode_publidhed">
+              <h1>200+</h1>
+              <h5>Episodes Published</h5>
+            </div>
+            <div class="avarage_rating">
+              <h1>4.9 <i class="fa-solid fa-star"></i></h1>
+              <h5>Average Rating</h5>
+            </div>
+            <div class="industry_experts">
+              <h1>30+</h1>
+              <h5>Industry Experts</h5>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- About Podcast Section End -->
 
     <!-- Rating  Review Count Section Start -->
-    <section class="rating_review_wrapper">
-        
-    </section>
+    <section class="rating_review_wrapper"></section>
     <!-- Rating  Review Count Section End -->
-</body>
+  </body>
 </html>
