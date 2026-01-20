@@ -1,0 +1,106 @@
+/* Responsive Design Under 992px */
+@media screen and (max-width: 992px) {
+
+    /* Header Section Start */
+    .nav_menu, .header_btn {
+        display: none;
+    }
+
+    .humburger_menu_btn {
+        display: block;
+    }
+    /* Header Section End */
+
+    /* Hero Section Start */
+    .hero .hero_content h1 {
+        font-size: 40px;
+        line-height: 50px;
+    
+    }
+    /* Hero Section End */
+
+    /* About Section Start */
+    .about_podcast_wrapper {
+        padding: 50px 0;
+    }
+    .about_podcast .about_podcast_content h1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .rating_review_count {
+        flex-wrap: wrap;
+    }
+
+    .monthly_listeners, .episode_publidhed, .avarage_rating, .industry_experts {
+        width: 50%;
+    }
+    
+    /* About Section End */ 
+
+    /* Choose Us Section Start */
+    .episodes_wrapper {
+        padding: 50px 0;
+    }
+    .choose_us_content h1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .choose_us_content_f_card.d-flex, .choose_us_content_s_card.d-flex {
+        flex-direction: column;
+    }
+
+    .choose_us_content_audio_card, .choose_us_content_friendly_card_content, .mobile_friendly_card, .mobile_community_card, .choose_us_content_interview_card, .choose_us_content_resource_card_content {
+        width: 100% !important;
+    }
+    /* Choose Us Section End */
+
+    /* Episode Section Start */
+    .episodes_content h1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .episode_cards.d-flex {
+        flex-direction: column;
+    }
+
+    .episode_cards > div{
+        width: 100% !important;
+    }
+    .episode_card iframe {
+        height: 350px;
+    }
+    /* Episode Section End */
+
+    /* Host Section Start */
+    .host_wrapper {
+        padding: 50px 0;
+    }
+    .host_content h1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .host_content_card.d-flex {
+        flex-direction: column;
+    }
+    .host_about h2 {
+       text-align: center;
+    }
+    .host_about h4 {
+        text-align: center;
+    }
+
+    .host_social.d-flex {
+        justify-content: center;
+    }
+    /* Host Section End */
+
+    /* Footer Section Start */
+    .footer_wrapper {
+        padding: 50px 0;
+    }
+    
+    /* Footer Section End */
+}
