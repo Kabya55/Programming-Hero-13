@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body>
+    <header>
+      <h1>This my header no banner</h1>
+      <h1>Welcome to my DOM</h1>
+    </header>
+    <body>
+      <section>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li id="name">Item 3</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="food">I love Food</h1>
+        <ul>
+          <li>vat</li>
+          <li>mas</li>
+          <li>dal</li>
+          <li>gril</li>
+          <li class="bidashe">pizza</li>
+          <li class="bidashe">burger</li>
+          <li class="bidashe">pasta</li>
+        </ul>
+      </section>
+    </body>
+    <script>
+      // getElementById
+      const foodTitle = document.getElementById("food");
+      console.log(foodTitle.innerText);
+      foodTitle.innerText = "My favorate food lest";
+
+      const changeName = document.getElementById("name");
+      changeName.innerText = "Kabya";
+      // getElementsByClassName
+      const bidasheItems = document.getElementsByClassName("bidashe");
+      console.log(bidasheItems);
+      for (const bidasheItem of bidasheItems) {
+        console.log(bidasheItem.innerText);
+      }
+    </script>
+  </body>
+</html>
