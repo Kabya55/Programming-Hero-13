@@ -1,0 +1,10 @@
+#dom h1 {
+  color: aqua;
+}
+.colour {
+  background-color: blueviolet;
+  border: 2px solid pink;
+  border-radius: 15px;
+  padding-left: 10px;
+  font-size: 25px;
+}
