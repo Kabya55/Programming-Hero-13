@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment Box</title>
+    <style>
+      .comment,
+      .btn {
+        font-size: 25px;
+        border: 5px solid purple;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .btn:hover {
+        background-color: purple;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Comment Box</h1>
+      <div id="comment-containner">
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque culpa
+          delectus deserunt!
+        </p>
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque culpa
+          delectus deserunt!
+        </p>
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque culpa
+          delectus deserunt!
+        </p>
+      </div>
+      <div>
+        <textarea name="" id="input-valu" cols="70" rows="10"></textarea>
+        <br /><br />
+        <button id="set" class="btn">Set✅▶️</button>
+      </div>
+    </section>
+    <script>
+      document.getElementById("set").addEventListener("click", function () {
+        // console.log("tuki");
+
+        const inputValue = document.getElementById("input-valu");
+        // console.log(inputValue);
+        const setInputValue = inputValue.value;
+        // console.log(setInputValue);
+        const commentElement = document.createElement("p");
+        commentElement.classList.add("comment");
+        commentElement.innerText = setInputValue;
+
+        const commentContainner = document.getElementById("comment-containner");
+        commentContainner.appendChild(commentElement);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete</title>
+  </head>
+  <body>
+    <h1 id="input-heading">Enabel and desable Delete batton</h1>
+    <input id="input-text" placeholder="Delete" type="text" />
+    <button id="input-delete" disabled>Delete</button>
+    <script>
+      document
+        .getElementById("input-text")
+        .addEventListener("keyup", function (event) {
+          const value = event.target.value;
+          //   console.log(value);
+          const btnDelete = document.getElementById("input-delete");
+          const removeHeading = document.getElementById("input-heading");
+
+          if (value === "delete") {
+            btnDelete.removeAttribute("disabled");
+            removeHeading.style.display = "none";
+          } else {
+            btnDelete.setAttribute("disabled", true);
+            removeHeading.style.display = "block";
+          }
+        });
+    </script>
+  </body>
+</html>

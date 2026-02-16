@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handlear</title>
+  </head>
+  <body>
+    <h1 id="page-title">Event Handlear</h1>
+    <button id="change-text">Chande Text</button>
+    <h1 id="page-title2">Event Handlear2</h1>
+    <button id="change-text2">Chande Text2</button>
+    <br />
+    <br />
+    <br />
+    <h1 id="update-name">Input your name and click updade dutton</h1>
+    <input id="input-name" placeholder="Youre Name" type="text" />
+    <button id="update">Update</button>
+    <script>
+      // Set event listener
+      document.getElementById("update").addEventListener("click", function () {
+        // console.log("Paisa");
+        // Set the text from input field
+        const inputName = document.getElementById("input-name");
+        // console.log(inputName);
+        const name = inputName.value;
+        // console.log(name);
+        //  Set Name
+        const nameH1 = document.getElementById("update-name");
+        nameH1.innerText = name;
+      });
+    </script>
+
+    <script src="./event.js"></script>
+  </body>
+</html>
