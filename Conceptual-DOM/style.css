@@ -1,0 +1,33 @@
+* {
+  max-width: 1170px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+#btn {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: blueviolet;
+  font-size: xx-large;
+  color: aliceblue;
+}
+
+#count {
+  font-size: 5rem;
+}
+.price {
+  display: flex;
+}
+img {
+  width: 100%;
+}
+.main-section {
+  display: flex;
+  gap: 5px;
+}
+.wish-div {
+  border: 3px solid black;
+  width: 400px;
+  padding: 10px;
+  border-radius: 15px;
+}
