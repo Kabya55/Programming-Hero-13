@@ -5,7 +5,7 @@ document.getElementById("login-btn").addEventListener("click", function () {
   const inputPass = document.getElementById("input-pass");
   const pass = inputPass.value;
 
-  if (number == 1234567890 && pass == 1234) {
+  if (number === "12345678901" && pass === "1234") {
     // alert("Login Success");
     window.location.assign("../home.html");
   } else {
