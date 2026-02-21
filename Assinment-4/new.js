@@ -33,3 +33,19 @@ function toggleStyle(id) {
   selected.classList.remove("bg-gray-200", "text-gray-700");
   selected.classList.add("bg-blue-600", "text-white");
 }
+// Update ui
+function updateStatusUI(cardElement, status) {
+  const statusSpan = cardElement.querySelector(".status");
+
+  if (status === "Interview") {
+    statusSpan.innerText = "Interview";
+    statusSpan.className =
+      "status inline-block bg-green-200 text-green-700 text-xs px-3 py-1 rounded mt-3";
+  }
+
+  if (status === "Rejected") {
+    statusSpan.innerText = "Rejected";
+    statusSpan.className =
+      "status inline-block bg-red-200 text-red-700 text-xs px-3 py-1 rounded mt-3";
+  }
+}
