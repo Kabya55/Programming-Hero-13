@@ -21,3 +21,15 @@ cards.forEach((card) => {
     status: "All",
   });
 });
+
+// TAB TOGGLE
+function toggleStyle(id) {
+  [allJobsBtn, interviewJobsBtn, rejectedJobsBtn].forEach((btn) => {
+    btn.classList.remove("bg-blue-600", "text-white");
+    btn.classList.add("bg-gray-200", "text-gray-700");
+  });
+
+  const selected = document.getElementById(id);
+  selected.classList.remove("bg-gray-200", "text-gray-700");
+  selected.classList.add("bg-blue-600", "text-white");
+}
