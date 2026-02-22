@@ -49,3 +49,19 @@ function updateStatusUI(cardElement, status) {
       "status inline-block bg-red-200 text-red-700 text-xs px-3 py-1 rounded mt-3";
   }
 }
+
+// CLICK
+
+document.querySelector("main").addEventListener("click", function (e) {
+  const cardElement = e.target.closest(".card");
+  if (!cardElement) return;
+
+  const job = jobs.find((j) => j.element === cardElement);
+  if (!job) return;
+
+  // INTERVIEW CLICK
+  if (e.target.classList.contains("interview-btn")) {
+    job.status = "Interview";
+    updateStatusUI(cardElement, "Interview");
+  }
+});
