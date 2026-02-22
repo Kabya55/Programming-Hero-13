@@ -20,6 +20,7 @@ cards.forEach((card) => {
     companyName: card.querySelector(".companyName").innerText,
     status: "All",
   });
+  masin();
 });
 
 // TAB TOGGLE
@@ -32,6 +33,7 @@ function toggleStyle(id) {
   const selected = document.getElementById(id);
   selected.classList.remove("bg-gray-200", "text-gray-700");
   selected.classList.add("bg-blue-600", "text-white");
+  masin();
 }
 // Update ui
 function updateStatusUI(cardElement, status) {
@@ -76,4 +78,80 @@ document.querySelector("main").addEventListener("click", function (e) {
     jobs = jobs.filter((j) => j !== job);
     cardElement.remove();
   }
+  masin();
 });
+
+// Calculate and Emty SMS
+function masin() {
+  let interviewCount = 0;
+  let rejectedCount = 0;
+
+  let activeTab = "All";
+
+  if (interviewJobsBtn.classList.contains("bg-blue-600")) {
+    activeTab = "Interview";
+  }
+  if (rejectedJobsBtn.classList.contains("bg-blue-600")) {
+    activeTab = "Rejected";
+  }
+
+  jobs.forEach((job) => {
+    if (job.status === "Interview") interviewCount++;
+    if (job.status === "Rejected") rejectedCount++;
+
+    if (activeTab === "All") {
+      job.element.style.display = "block";
+    }
+
+    if (activeTab === "Interview") {
+      if (job.status === "Interview") {
+        job.element.style.display = "block";
+      } else {
+        job.element.style.display = "none";
+      }
+    }
+
+    if (activeTab === "Rejected") {
+      if (job.status === "Rejected") {
+        job.element.style.display = "block";
+      } else {
+        job.element.style.display = "none";
+      }
+    }
+  });
+
+  // Empty message
+  if (
+    (activeTab === "Interview" && interviewCount === 0) ||
+    (activeTab === "Rejected" && rejectedCount === 0) ||
+    (activeTab === "All" && jobs.length === 0)
+  ) {
+    filterSection.innerHTML = `
+      <div class="text-center py-10">
+      <img class="mx-auto m-4" src="./img/noAvailable.png" alt="" />
+        <h3 class="text-xl font-semibold text-gray-700">No Jobs Available</h3>
+        <p class="text-gray-500 mt-2">Check back soon for new job opportunities.</p>
+      </div>
+    `;
+    filterSection.classList.remove("hidden");
+    allCardsContainer.classList.add("hidden");
+  } else {
+    filterSection.innerHTML = "";
+    filterSection.classList.add("hidden");
+    allCardsContainer.classList.remove("hidden");
+  }
+
+  total.innerText = jobs.length;
+  interviews.innerText = interviewCount;
+  rejecteds.innerText = rejectedCount;
+
+  if (activeTab === "All") {
+    availableJobs.innerText = jobs.length;
+  }
+  if (activeTab === "Interview") {
+    availableJobs.innerText = interviewCount + ` of ` + jobs.length;
+  }
+  if (activeTab === "Rejected") {
+    availableJobs.innerText = rejectedCount + ` of ` + jobs.length;
+  }
+}
