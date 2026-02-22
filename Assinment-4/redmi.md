@@ -2,7 +2,7 @@ Question: 1
 //difference between getElementById, getElementsByClassName
 getElementById() retrieves an element with an id
 Return a single element
-change single element style 
+change single element style
 
 getElementsByClassName() is used to get multiple elements of a class with the same name
 Return a HTMLCollection
@@ -13,14 +13,14 @@ You can use querySelector() to get an element, but if there are multiple class o
 Return a single element
 
 querySelectorAll() will retrieve all elements that match the selector you give it.
-Return a  NodeList
+Return a NodeList
 
 Question: 1
 //create and insert a new element into the DOM
 
 First, you have to set an ID inside the html tag, then in JS, you have to create a new Element with that ID and set inner Text or inner HTML inside it and appendChild inside the new Element that was created first.
 In the example:
-HTML
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -40,6 +40,7 @@ HTML
       title.appendChild(newDiv);
 
     </script>
+
   </body>
 </html>
 
