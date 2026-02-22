@@ -64,4 +64,16 @@ document.querySelector("main").addEventListener("click", function (e) {
     job.status = "Interview";
     updateStatusUI(cardElement, "Interview");
   }
+
+  // REJECTED CLICK
+  if (e.target.classList.contains("rejected-btn")) {
+    job.status = "Rejected";
+    updateStatusUI(cardElement, "Rejected");
+  }
+
+  // DELETE CLICK
+  if (e.target.closest(".delete-btn")) {
+    jobs = jobs.filter((j) => j !== job);
+    cardElement.remove();
+  }
 });
