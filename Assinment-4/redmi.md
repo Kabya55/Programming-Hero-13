@@ -45,3 +45,29 @@ In the example:
 </html>
 
 Question: 3
+Event Bubbling is a process where an event starts from the target element and propagates upward through its parent elements up to the document.
+
+Question: 4
+Event delegation is a very powerful and smart technique in JavaScript. Instead of adding an addEventListener to each child element separately, you add a single listener to a parent element. Then, when a child is clicked, that event bubbles up to the parent and can be handled.
+
+Using event delegation:
+
+1. Code is much faster
+2. Code is scalable
+3. No problem if the code is large
+4. Code is easier to maintain
+
+Question: 5
+e.preventDefault()
+
+1. Disables the browser's default behavior.
+2. Disables default actions such as opening links, submitting forms, toggling checkboxes, etc.
+3. The event bubbles to the parent.
+4. Used in general form validation, custom links, drag and drop.
+
+e.stopPropagation()
+
+1. Using this prevents the event from going to the parent.
+2. It does not stop the default action.
+3. The event stops, it cannot go to the parent at all.
+4. Usually used in event delegation, nested clickable elements, modals.
