@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tree Shop</title>
+    <!-- Tailwind and Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="w-11/12 mx-auto">
+    <h1 class="text-3xl text-center font-bold mt-3">Choose Your Trees</h1>
+    <section class="grid grid-cols-12 gap-8 mt-8">
+      <!-- Categories -->
+      <div class="col-span-3 border-2 border-gray-300 p-4">
+        <h1 class="font-bold pb-3">Categories</h1>
+        <div class="space-y-3">
+          <button id="allTree" class="btn btn-success w-full">All Trees</button>
+          <!-- category container -->
+          <div id="category-container" class="space-y-3">
+            <!-- <button class="btn btn-success w-full">Success</button>
+            <button class="btn btn-success w-full">Success</button> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Trees -->
+      <div class="col-span-6 border-2 border-gray-300 p-4">
+        <!-- loading start -->
+        <div class="flex justify-center items-center p-3" id="loading">
+          <span class="loading loading-ring loading-xl"></span>
+        </div>
+        <!-- loading end -->
+
+        <div id="tree-container" class="grid grid-cols-3 gap-4">
+          <!-- Tree card 1 -->
+          <!-- <div class="card bg-white shadow-sm">
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Card Title</h2>
+              <p class="line-clamp-2">
+                A card component has a figure, a body part, and inside body
+                there are title and actions lorem1500 parts
+              </p>
+              <div class="badge badge-success badge-outline">Success</div>
+
+              <div class="flex justify-between items-center">
+                <h2 class="font-bold text-xl text-[#4ade80]">$5000</h2>
+                <button class="btn green">Card</button>
+              </div>
+            </div>
+          </div> -->
+          <!-- Tree card 1 end -->
+
+          <!-- Tree items will be displayed here -->
+        </div>
+      </div>
+      <!-- Cart   -->
+      <div class="col-span-3 border-2 border-gray-300 p-4">
+        <h1 class="font-bold">Cart</h1>
+      </div>
+    </section>
+    <!-- Script js -->
+    <script src="./script.js"></script>
+  </body>
+</html>
