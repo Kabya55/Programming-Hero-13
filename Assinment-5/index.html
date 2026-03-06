@@ -43,19 +43,32 @@
         </div>
 
         <label class="label font-medium text-base">Username</label>
-        <input type="email" class="input" placeholder="Enter Username" />
+        <input
+          id="input-username"
+          type="text"
+          class="input"
+          placeholder="Enter Username"
+        />
         <label class="label font-medium text-base text-[#4A00FF]"
           >Default: admin</label
         >
 
         <label class="label font-medium text-base mt-4">Password</label>
-        <input type="password" class="input" placeholder="Enter Password" />
+        <input
+          id="input-pass"
+          type="password"
+          class="input"
+          placeholder="Enter Password"
+        />
         <label class="label font-medium text-base text-[#4A00FF]"
           >Default: admin123</label
         >
 
-        <button class="btn btn-primary mt-5 mb-5">Sign In</button>
+        <button id="login-btn" class="btn btn-primary mt-5 mb-5">
+          Sign In
+        </button>
       </fieldset>
     </section>
+    <script src="./script/login.js"></script>
   </body>
 </html>
