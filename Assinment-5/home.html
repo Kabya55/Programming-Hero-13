@@ -31,7 +31,134 @@
       }
     </style>
   </head>
-  <body>
-    <h1>Kabya</h1>
+  <body class="bg-[#F8FAFC]">
+    <!-- Navbar start -->
+    <header class="sticky top-0 z-10">
+      <div class="navbar bg-base-100 shadow-sm">
+        <div class="flex flex-1 gap-4">
+          <img
+            src="./assets/github-logo.png"
+            alt="github-logo"
+            class="w-[36px]"
+          />
+          <h1 class="font-semibold text-2xl">GitHub Issues Tracker</h1>
+        </div>
+        <div class="flex gap-2">
+          <input
+            type="text"
+            placeholder="🔍 Search"
+            class="input input-bordered w-24 md:w-auto"
+          />
+          <button class="btn btn-primary">Search</button>
+        </div>
+      </div>
+    </header>
+    <!-- Navbar end -->
+
+    <!-- all open closed btn section start -->
+
+    <section
+      class="w-11/12 mx-auto flex gap-4 mt-[60px] bg-base-100 shadow-sm p-4"
+    >
+      <button class="btn btn-primary">All</button>
+      <button class="btn">Open</button>
+      <button class="btn">Closed</button>
+    </section>
+    <!-- all open closed btn section end -->
+
+    <!--issues count section start  -->
+
+    <section
+      class="w-11/12 mx-auto flex gap-4 mt-[60px] bg-base-100 shadow-sm p-4"
+    >
+      <div class="w-full flex items-center justify-between">
+        <!-- Left Side -->
+        <div class="flex items-center gap-4">
+          <!-- Icon -->
+          <div
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100"
+          >
+            <img src="./assets/Aperture.png" alt="Aperture" />
+          </div>
+
+          <!-- Text -->
+          <div>
+            <h2 class="text-lg font-semibold text-gray-800">50 Issues</h2>
+            <p class="text-sm text-gray-500">
+              Track and manage your project issues
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="flex items-center gap-6 text-sm">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+            <span class="text-gray-700">Open</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+            <span class="text-gray-700">Closed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- issues count section end -->
+
+    <!-- issues section start  -->
+    <section
+      class="w-11/12 mx-auto grid grid-cols-3 gap-4 mt-[60px] bg-base-100 shadow-sm p-4"
+    >
+      <div
+        class="w-[340px] bg-white rounded-lg shadow-md border-t-4 border-green-500"
+      >
+        <div class="p-5">
+          <div class="flex items-start justify-end mb-4">
+            <span
+              class="px-4 py-1 rounded-full bg-red-100 text-red-500 text-sm font-medium"
+            >
+              HIGH
+            </span>
+          </div>
+
+          <h2 class="text-lg font-semibold text-gray-800 mb-2">
+            Fix Navigation Menu On Mobile Devices
+          </h2>
+
+          <p class="text-gray-500 text-sm mb-4">
+            The navigation menu doesn't collapse properly on mobile devices...
+          </p>
+
+          <div class="flex gap-3">
+            <span
+              class="flex items-center gap-1 px-3 py-1 rounded-full bg-red-100 text-red-500 text-sm"
+            >
+              🐞 BUG
+            </span>
+
+            <span
+              class="flex items-center gap-1 px-3 py-1 rounded-full bg-yellow-100 text-yellow-600 text-sm border border-yellow-300"
+            >
+              🛟 HELP WANTED
+            </span>
+          </div>
+        </div>
+
+        <div
+          class="border-t px-5 py-4 text-gray-500 text-sm space-y-1 flex items-center justify-between"
+        >
+          <p>#1 by john_doe</p>
+          <p>1/15/2024</p>
+        </div>
+        <div
+          class="px-5 py-4 text-gray-500 text-sm space-y-1 flex items-center justify-between"
+        >
+          <p>#1 by john_doe</p>
+          <p>1/15/2024</p>
+        </div>
+      </div>
+    </section>
+    <!-- issues section end -->
   </body>
 </html>
