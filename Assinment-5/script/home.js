@@ -60,6 +60,7 @@ const desplayAllIssues = (issues) => {
       issue.status === "open" ? "border-green-500" : "border-[#A855F7]";
     //   create issue card
     const div = document.createElement("div");
+    div.classList.add("flex", "justify-center", "items-center");
     div.innerHTML = `
      <div onclick="loadModal(${issue.id})"
         class="w-[340px] bg-white rounded-lg shadow-md border-t-4 ${borderColor}"
