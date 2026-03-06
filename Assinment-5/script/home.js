@@ -1,3 +1,15 @@
+// loading spinner
+// loading spinner
+const toggleSpinner = (isLoading) => {
+  if (isLoading == true) {
+    document.getElementById("loading-spinner").classList.remove("hidden");
+    document.getElementById("all-issues-container").classList.add("hidden");
+  } else {
+    document.getElementById("loading-spinner").classList.add("hidden");
+    document.getElementById("all-issues-container").classList.remove("hidden");
+  }
+};
+
 const createElement = (arr) => {
   const htmlElement = arr.map(
     (el) =>
@@ -11,6 +23,7 @@ const createElement = (arr) => {
 let allIssues = [];
 
 const loadAllIssues = () => {
+  toggleSpinner(true);
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then((response) => response.json())
     .then((data) => {
@@ -20,11 +33,13 @@ const loadAllIssues = () => {
 };
 
 const loadOpenIssues = () => {
+  toggleSpinner(true);
   const openIssues = allIssues.filter((issue) => issue.status === "open");
   desplayAllIssues(openIssues);
 };
 
 const loadClosedIssues = () => {
+  toggleSpinner(true);
   const closedIssues = allIssues.filter((issue) => issue.status === "closed");
   desplayAllIssues(closedIssues);
 };
@@ -80,6 +95,7 @@ const desplayAllIssues = (issues) => {
       </div>
     `;
     allIssuesContainer.appendChild(div);
+    toggleSpinner(false);
   });
 };
 // active button
