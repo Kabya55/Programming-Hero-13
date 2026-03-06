@@ -179,6 +179,77 @@
     </section>
     <!-- issues section end -->
 
+    <!-- modal section start -->
+    <section>
+      <!-- Open the modal using ID.showModal() method -->
+      <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h1 class="text-2xl font-semibold text-gray-800 mb-3">
+            Fix broken image uploads
+          </h1>
+
+          <!-- Status Row -->
+          <div class="flex items-center gap-3 text-sm text-gray-500 mb-4">
+            <span
+              class="bg-green-500 text-white px-3 py-1 rounded-full text-xs"
+            >
+              Opened
+            </span>
+
+            <span>• Opened by Fahim Ahmed</span>
+
+            <span>• 22/02/2026</span>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex gap-3 mb-5">
+            <span
+              class="flex items-center gap-1 text-red-500 bg-red-100 px-3 py-1 rounded-full text-sm"
+            >
+              BUG
+            </span>
+
+            <span
+              class="flex items-center gap-1 text-yellow-600 bg-yellow-100 border border-yellow-300 px-3 py-1 rounded-full text-sm"
+            >
+              HELP WANTED
+            </span>
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-600 mb-6">
+            The navigation menu doesn't collapse properly on mobile devices.
+            Need to fix the responsive behavior.
+          </p>
+
+          <!-- Info Box -->
+          <div class="bg-gray-100 rounded-lg p-5 flex justify-between mb-6">
+            <div>
+              <p class="text-gray-500 text-sm">Assignee:</p>
+              <p class="font-semibold text-gray-800">Fahim Ahmed</p>
+            </div>
+
+            <div>
+              <p class="text-gray-500 text-sm">Priority:</p>
+              <span
+                class="bg-red-500 text-white text-xs px-3 py-1 rounded-full"
+              >
+                HIGH
+              </span>
+            </div>
+          </div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </section>
+    <!-- modal section end -->
+
     <!-- script -->
     <script src="./script/home.js"></script>
   </body>
