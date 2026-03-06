@@ -8,14 +8,31 @@ const createElement = (arr) => {
   return htmlElement.join(" ");
 };
 
+let allIssues = [];
+
 const loadAllIssues = () => {
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then((response) => response.json())
-    .then((data) => desplayAllIssues(data.data));
+    .then((data) => {
+      allIssues = data.data;
+      desplayAllIssues(allIssues);
+    });
+};
+
+const loadOpenIssues = () => {
+  const openIssues = allIssues.filter((issue) => issue.status === "open");
+  desplayAllIssues(openIssues);
+};
+
+const loadClosedIssues = () => {
+  const closedIssues = allIssues.filter((issue) => issue.status === "closed");
+  desplayAllIssues(closedIssues);
 };
 
 const desplayAllIssues = (issues) => {
   const allIssuesContainer = document.getElementById("all-issues-container");
+  const issuCount = document.getElementById("issu-count");
+  issuCount.textContent = `${issues.length} Issues`;
   allIssuesContainer.innerHTML = "";
   issues.forEach((issue) => {
     const borderColor =
@@ -65,4 +82,15 @@ const desplayAllIssues = (issues) => {
     allIssuesContainer.appendChild(div);
   });
 };
+// active button
+function setActive(button) {
+  const buttons = document.querySelectorAll(".btn");
+
+  buttons.forEach((btn) => {
+    btn.classList.remove("btn-primary");
+  });
+
+  button.classList.add("btn-primary");
+}
+
 loadAllIssues();

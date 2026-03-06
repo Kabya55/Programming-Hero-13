@@ -60,9 +60,18 @@
     <section
       class="w-11/12 mx-auto flex gap-4 mt-[60px] bg-base-100 shadow-sm p-4"
     >
-      <button class="btn btn-primary">All</button>
-      <button class="btn">Open</button>
-      <button class="btn">Closed</button>
+      <button
+        onclick="(loadAllIssues(), setActive(this))"
+        class="btn btn-primary"
+      >
+        All
+      </button>
+      <button onclick="(loadOpenIssues(), setActive(this))" class="btn">
+        Open
+      </button>
+      <button onclick="(loadClosedIssues(), setActive(this))" class="btn">
+        Closed
+      </button>
     </section>
     <!-- all open closed btn section end -->
 
@@ -83,7 +92,9 @@
 
           <!-- Text -->
           <div>
-            <h2 class="text-lg font-semibold text-gray-800">50 Issues</h2>
+            <h2 id="issu-count" class="text-lg font-semibold text-gray-800">
+              50 Issues
+            </h2>
             <p class="text-sm text-gray-500">
               Track and manage your project issues
             </p>
