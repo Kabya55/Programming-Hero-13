@@ -1,5 +1,4 @@
 // loading spinner
-// loading spinner
 const toggleSpinner = (isLoading) => {
   if (isLoading == true) {
     document.getElementById("loading-spinner").classList.remove("hidden");
@@ -10,6 +9,7 @@ const toggleSpinner = (isLoading) => {
   }
 };
 
+// labels array to html element
 const createElement = (arr) => {
   const htmlElement = arr.map(
     (el) =>
@@ -22,6 +22,7 @@ const createElement = (arr) => {
 
 let allIssues = [];
 
+// fetch api data
 const loadAllIssues = () => {
   toggleSpinner(true);
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
@@ -32,29 +33,35 @@ const loadAllIssues = () => {
     });
 };
 
+// filtering Open Issues data
 const loadOpenIssues = () => {
   toggleSpinner(true);
   const openIssues = allIssues.filter((issue) => issue.status === "open");
   desplayAllIssues(openIssues);
 };
 
+// filtering Closed Issues data
 const loadClosedIssues = () => {
   toggleSpinner(true);
   const closedIssues = allIssues.filter((issue) => issue.status === "closed");
   desplayAllIssues(closedIssues);
 };
 
+// displaying issues
 const desplayAllIssues = (issues) => {
   const allIssuesContainer = document.getElementById("all-issues-container");
+  //   update issue count
   const issuCount = document.getElementById("issu-count");
   issuCount.textContent = `${issues.length} Issues`;
   allIssuesContainer.innerHTML = "";
   issues.forEach((issue) => {
+    // determine border color based on issue status
     const borderColor =
       issue.status === "open" ? "border-green-500" : "border-[#A855F7]";
+    //   create issue card
     const div = document.createElement("div");
     div.innerHTML = `
-     <div
+     <div onclick="loadModal(${issue.id})"
         class="w-[340px] bg-white rounded-lg shadow-md border-t-4 ${borderColor}"
       >
         <div class="p-5">
@@ -98,9 +105,71 @@ const desplayAllIssues = (issues) => {
     toggleSpinner(false);
   });
 };
+
+// load modal data
+const loadModal = (id) => {
+  fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`)
+    .then((response) => response.json())
+    .then((data) => desplayModal(data.data));
+};
+// displaying modal data
+const desplayModal = (issue) => {
+  const modalContainner = document.getElementById("modal-containner");
+  modalContainner.innerHTML = "";
+  const div = document.createElement("div");
+  div.innerHTML = `
+  <h1 class="text-2xl font-semibold text-gray-800 mb-3">
+            ${issue.title}
+          </h1>
+
+          
+          <div class="flex items-center gap-3 text-sm text-gray-500 mb-4">
+            <span
+              class="bg-green-500 text-white px-3 py-1 rounded-full text-xs"
+            >
+              ${issue.status}
+            </span>
+
+            <span>• ${issue.author}</span>
+
+            <span>• ${issue.createdAt}</span>
+          </div>
+
+          
+          <div class="flex gap-3 mb-5">
+            ${createElement(issue.labels)}
+          </div>
+
+          
+          <p class="text-gray-600 mb-6">
+            ${issue.description}
+          </p>
+
+         
+          <div class="bg-gray-100 rounded-lg p-5 flex justify-between mb-6">
+            <div>
+              <p class="text-gray-500 text-sm">Assignee: </p>
+              <p class="font-semibold text-gray-800">${issue.assignee}</p>
+            </div>
+
+            <div>
+              <p class="text-gray-500 text-sm">Priority:</p>
+              <span
+                class="bg-red-500 text-white text-xs px-3 py-1 rounded-full"
+              >
+                ${issue.priority}
+              </span>
+            </div>
+          </div>
+          
+  `;
+  modalContainner.appendChild(div);
+  document.getElementById("my_modal_5").showModal();
+};
+
 // active button
 function setActive(button) {
-  const buttons = document.querySelectorAll(".btn");
+  const buttons = document.querySelectorAll(".active-btn");
 
   buttons.forEach((btn) => {
     btn.classList.remove("btn-primary");
