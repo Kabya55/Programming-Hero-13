@@ -58,6 +58,11 @@ const desplayAllIssues = (issues) => {
     // determine border color based on issue status
     const borderColor =
       issue.status === "open" ? "border-green-500" : "border-[#A855F7]";
+    //Open issu and closed issu icon
+    const statusIcon =
+      issue.status === "open"
+        ? `<img src="../assets/Open-Status.png" alt="open">`
+        : `<img src="../assets/Closed- Status .png" alt="closed">`;
     //   create issue card
     const div = document.createElement("div");
     div.classList.add("flex", "justify-center", "items-center");
@@ -66,12 +71,18 @@ const desplayAllIssues = (issues) => {
         class="w-[340px] bg-white rounded-lg shadow-md border-t-4 ${borderColor}"
       >
         <div class="p-5">
-          <div class="flex items-start justify-end mb-4">
+          <div class="flex items-start justify-between mb-4">
+            <span
+              class="px-4 py-1 "
+            >
+              ${statusIcon}
+            </span>
             <span
               class="px-4 py-1 rounded-full bg-red-100 text-red-500 text-sm font-medium"
             >
               ${issue.priority}
             </span>
+            
           </div>
 
           <h2 class="text-lg font-semibold text-gray-800 mb-2">
