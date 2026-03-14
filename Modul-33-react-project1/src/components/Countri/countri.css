@@ -1,0 +1,23 @@
+.countri {
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid salmon;
+  border-radius: 10px;
+}
+
+.btn {
+  /* margin-top: 5px; */
+  /* background-color: aqua; */
+  border: 2px solid aqua;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: medium;
+  font-weight: 900;
+}
+.btn:hover {
+  background-color: aqua;
+  color: aliceblue;
+}
+.countri-visited {
+  background-color: aqua;
+}
