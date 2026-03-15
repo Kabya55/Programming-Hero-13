@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./countri.css";
 
-const Countri = ({ countri }) => {
+const Countri = ({ countri, handleVisitedCountri }) => {
   const [visited, setvisited] = useState(false);
   //   console.log(countri.name.common);
   const handleVisite = () => {
@@ -20,6 +20,7 @@ const Countri = ({ countri }) => {
     // Second system
 
     setvisited(visited ? false : true);
+    handleVisitedCountri(countri);
 
     // 3rd system
 
