@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality blogs and marketing copy in seconds with advanced AI.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "best seller",
+    "features": [
+      "Unlimited AI generations",
+      "50+ writing templates",
+      "Grammar checker",
+      "Plagiarism report"
+    ],
+    "icon": "https://img.icons8.com/color/96/doc-and-pen.png"
+  },
+  {
+    "id": 2,
+    "name": "Starter Plan",
+    "description": "Perfect for individuals getting started with basic digital tools.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "new",
+    "features": [
+      "Access to 10 tools",
+      "Basic templates",
+      "Community support",
+      "1 project per month"
+    ],
+    "icon": "https://img.icons8.com/color/96/rocket.png"
+  },
+  {
+    "id": 3,
+    "name": "SEO Master",
+    "description": "Rank your website on the first page with our automated SEO analyzer.",
+    "price": 49,
+    "period": "monthly",
+    "tag": "popular",
+    "features": [
+      "Keyword tracking",
+      "Backlink analysis",
+      "Site audit tool",
+      "Competitor insights"
+    ],
+    "icon": "https://img.icons8.com/color/96/search-property.png"
+  },
+  {
+    "id": 4,
+    "name": "Design Guru",
+    "description": "Create stunning social media graphics with our drag-and-drop editor.",
+    "price": 199,
+    "period": "yearly",
+    "tag": "new",
+    "features": [
+      "1000+ UI elements",
+      "Custom fonts",
+      "Team collaboration",
+      "Export to SVG/PNG"
+    ],
+    "icon": "https://img.icons8.com/color/96/vector-opacity.png"
+  },
+  {
+    "id": 5,
+    "name": "Video Edit Pro",
+    "description": "Professional grade video editing directly in your browser.",
+    "price": 39,
+    "period": "monthly",
+    "tag": "best seller",
+    "features": [
+      "4K rendering",
+      "Stock music library",
+      "Auto captions",
+      "Green screen effect"
+    ],
+    "icon": "https://img.icons8.com/color/96/video-file.png"
+  },
+  {
+    "id": 6,
+    "name": "Code Assistant",
+    "description": "AI-powered coding assistant for developers to write bug-free code.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "popular",
+    "features": [
+      "Real-time debugging",
+      "Syntax highlighting",
+      "Multi-language support",
+      "Git integration"
+    ],
+    "icon": "https://img.icons8.com/color/96/code.png"
+  },
+  {
+    "id": 7,
+    "name": "Marketing Suite",
+    "description": "All-in-one marketing platform to grow your business fast.",
+    "price": 599,
+    "period": "yearly",
+    "tag": "best seller",
+    "features": [
+      "Email automation",
+      "CRM dashboard",
+      "Lead generation",
+      "Detailed analytics"
+    ],
+    "icon": "https://img.icons8.com/color/96/commercial.png"
+  },
+  {
+    "id": 8,
+    "name": "Cloud Storage",
+    "description": "Secure and encrypted cloud storage for your sensitive files.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "new",
+    "features": [
+      "2TB Storage",
+      "End-to-end encryption",
+      "File recovery",
+      "Mobile app access"
+    ],
+    "icon": "https://img.icons8.com/color/96/cloud-storage.png"
+  },
+  {
+    "id": 9,
+    "name": "Analytics Pro",
+    "description": "Understand your users better with deep-dive data visualization.",
+    "price": 79,
+    "period": "monthly",
+    "tag": "popular",
+    "features": [
+      "User heatmaps",
+      "Conversion funnel",
+      "Custom reports",
+      "API access"
+    ],
+    "icon": "https://img.icons8.com/color/96/combo-chart.png"
+  },
+  {
+    "id": 10,
+    "name": "Resume Builder",
+    "description": "Create ATS-optimized resumes that get you hired instantly.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "new",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Expert tips",
+      "Export to PDF"
+    ],
+    "icon": "https://img.icons8.com/color/96/resume.png"
+  }
+]
