@@ -8,7 +8,7 @@ import { ToastContainer } from "react-toastify";
 import TabBTN from "./tabBTN/TabBTN";
 import Cart from "./component/cart/Cart";
 const faceModal = async () => {
-  const res = await fetch("/public/models.json");
+  const res = await fetch("/models.json");
   return res.json();
 };
 
