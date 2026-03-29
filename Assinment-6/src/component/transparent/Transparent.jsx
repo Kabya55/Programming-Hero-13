@@ -3,9 +3,9 @@ import React from "react";
 const Transparent = () => {
   return (
     <>
-      <div className="bg-[#f8fafc] pb-32 px-4">
+      <div className="pb-32 px-4">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-extrabold text-[#0f172a] mb-4">
+          <h2 className="text-5xl font-extrabold mb-4">
             Simple, Transparent Pricing
           </h2>
           <p className="text-slate-500 text-[16px]">
