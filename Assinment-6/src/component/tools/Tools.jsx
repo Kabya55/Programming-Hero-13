@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import Products from "./Products";
 import Card from "./Card";
 
-const Tools = () => {
+const Tools = ({ promisData, slectedItms, setSlectedItms }) => {
+  const datas = use(promisData);
   const [active, setActive] = useState("products");
 
   return (
-    <div className="py-10 font-manrope">
+    <div className="max-w-4xl mx-auto py-10 font-manrope">
       <div className="text-center mb-10">
         <h2 className="text-5xl font-extrabold mb-4">Premium Digital Tools</h2>
         <p className="text-slate-500">
@@ -34,18 +35,22 @@ const Tools = () => {
               : "bg-transparent text-gray-500 hover:text-black"
           }`}
         >
-          Cart (0)
+          Cart ({slectedItms.length})
         </button>
       </div>
 
       <div className="max-w-7xl mx-auto px-4">
         {active === "products" ? (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <Products />
+            <Products
+              datas={datas}
+              slectedItms={slectedItms}
+              setSlectedItms={setSlectedItms}
+            />
           </div>
         ) : (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <Card />
+            <Card slectedItms={slectedItms} setSlectedItms={setSlectedItms} />
           </div>
         )}
       </div>
