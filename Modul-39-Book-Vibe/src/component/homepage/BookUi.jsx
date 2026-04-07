@@ -1,11 +1,15 @@
 import React from "react";
 import { FaRegStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 const BookUi = ({ book }) => {
-  const { bookName, author, image, category, tags, rating } = book;
+  const { bookName, author, image, category, tags, rating, bookId } = book;
 
   return (
-    <div className="w-[374px] h-[482px] bg-white border border-slate-200 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 flex flex-col mx-auto">
+    <Link
+      to={`/bookDetails/${bookId}`}
+      className="w-[374px] h-[482px] bg-white border border-slate-200 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 flex flex-col mx-auto"
+    >
       {/* Book Image Container */}
       <figure className="bg-[#f3f3f3] rounded-2xl py-6 mb-6 flex items-center justify-center h-[230px]">
         <img
@@ -47,7 +51,7 @@ const BookUi = ({ book }) => {
           <FaRegStar className="text-xl" />
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
