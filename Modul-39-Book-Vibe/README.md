@@ -1,16 +1,82 @@
-# React + Vite
+# 📚 Book Vibe Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern book browsing web application where users can explore books, view details, mark as read, and add books to wishlist.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+### 🏠 Home Page
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Navigation bar available on all pages
+- Banner section on home page
+- Books section with dynamic data fetching
+- Displays books as cards including:
+  - Book image
+  - Book name
+  - Author name
+  - Rating
 
-## Expanding the ESLint configuration
+#### 📖 Book Card Action
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Click on any book card → Opens **Book Details Page**
+
+---
+
+### 📄 Book Details Page
+
+- Shows full book information
+- Includes two buttons:
+  - ✅ Mark as Read
+  - ⭐ Add to Wishlist
+
+#### 🔔 Button Actions
+
+- Clicking any button shows **Toast Notification**
+- After action → Redirects to **Listed Books page**
+
+---
+
+### 📚 Listed Books Page
+
+- Contains two tabs:
+  - 📖 Read Books
+  - ⭐ Wishlist Books
+
+#### 🔍 Features:
+
+- Shows all read books
+- Shows all wishlist books
+- Sorting option available
+  - Sort books by rating (high to low)
+
+---
+
+### ⚠️ Error Page
+
+- Custom 404 page
+- Shows when invalid route is accessed
+
+---
+
+## 🧭 Navigation
+
+- Home
+- Listed Books
+- Error Page (Fallback)
+
+---
+
+## 🛠️ Tech Stack
+
+- React.js
+- JavaScript (ES6+)
+- Tailwind CSS
+- DaisyUI
+- React Router DOM
+- React Tabs
+- React Toastify
+
+---
+
+## 🌐 Live Link
