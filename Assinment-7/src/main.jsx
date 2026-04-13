@@ -1,0 +1,42 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router/dom";
+import RootLayout from "./layout/RootLayout";
+import HomePage from "./pages/homePage/HomePage";
+import TimelinePage from "./pages/timelinePage/TimelinePage";
+import FriendDetailsPage from "./pages/friendDetailsPage/FriendDetailsPage";
+import StatsPage from "./pages/statsPage/StatsPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout></RootLayout>,
+    children: [
+      {
+        path: "/",
+        element: <HomePage></HomePage>,
+      },
+      {
+        path: "/friend/:id",
+        element: <FriendDetailsPage></FriendDetailsPage>,
+      },
+      {
+        path: "/timeline",
+        element: <TimelinePage></TimelinePage>,
+      },
+      {
+        path: "/stats",
+        element: <StatsPage></StatsPage>,
+      },
+    ],
+    // errorElement: <ErorPage></ErorPage>,
+  },
+]);
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>,
+);
