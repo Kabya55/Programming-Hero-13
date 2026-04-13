@@ -5,7 +5,7 @@ import { IoLogoInstagram } from "react-icons/io5";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[#2f5d4e] text-white py-16">
+      <footer className="bg-[#244D3F] text-white py-16">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4">KeenKeeper</h1>
 

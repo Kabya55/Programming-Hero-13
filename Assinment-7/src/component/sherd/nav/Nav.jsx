@@ -15,7 +15,7 @@ const Nav = () => {
             `px-4 py-2 mr-1 rounded-lg text-md font-semibold transition-all duration-200
         ${
           isActive
-            ? "bg-green-800 text-white"
+            ? "bg-[#244D3F] text-white"
             : "text-gray-600 hover:bg-gray-100"
         }`
           }
@@ -32,7 +32,7 @@ const Nav = () => {
             `px-4 py-2 mr-1 rounded-lg text-md font-semibold transition-all duration-200
         ${
           isActive
-            ? "bg-green-800 text-white"
+            ? "bg-[#244D3F] text-white"
             : "text-gray-600 hover:bg-gray-100"
         }`
           }
@@ -49,7 +49,7 @@ const Nav = () => {
             `px-4 py-2 mr-1 rounded-lg text-md font-semibold transition-all duration-200
         ${
           isActive
-            ? "bg-green-800 text-white"
+            ? "bg-[#244D3F] text-white"
             : "text-gray-600 hover:bg-gray-100"
         }`
           }
