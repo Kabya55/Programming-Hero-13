@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io5";
 
 const Footer = () => {
@@ -7,16 +7,13 @@ const Footer = () => {
     <>
       <footer className="bg-[#2f5d4e] text-white py-16">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          {/* Title */}
           <h1 className="text-5xl font-bold mb-4">KeenKeeper</h1>
 
-          {/* Subtitle */}
           <p className="text-gray-200 text-sm mb-6">
             Your personal shelf of meaningful connections. Browse, tend, and
             nurture the relationships that matter most.
           </p>
 
-          {/* Social Links */}
           <p className="text-gray-300 mb-3">Social Links</p>
 
           <div className="flex justify-center gap-4 mb-10">
@@ -33,12 +30,9 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Divider */}
           <div className="border-t border-gray-400/30 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
-            {/* Left */}
             <p>© 2026 Kabya. All rights reserved.</p>
 
-            {/* Right */}
             <div className="flex gap-6 mt-3 md:mt-0">
               <a className="hover:text-white transition">Privacy Policy</a>
               <a className="hover:text-white transition">Terms of Service</a>
