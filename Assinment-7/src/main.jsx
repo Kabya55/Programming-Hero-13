@@ -8,6 +8,7 @@ import HomePage from "./pages/homePage/HomePage";
 import TimelinePage from "./pages/timelinePage/TimelinePage";
 import FriendDetailsPage from "./pages/friendDetailsPage/FriendDetailsPage";
 import StatsPage from "./pages/statsPage/StatsPage";
+import InteractionProvider from "./context/InteractionContext";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <InteractionProvider>
+      <RouterProvider router={router} />
+    </InteractionProvider>
   </StrictMode>,
 );

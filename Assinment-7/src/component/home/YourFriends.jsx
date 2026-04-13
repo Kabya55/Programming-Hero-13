@@ -12,7 +12,7 @@ const YourFriends = () => {
           <h2 className="text-3xl font-bold text-[#1e293b]">Your Friends</h2>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {loading ? (
             <div className="col-span-4 flex flex-col items-center justify-center min-h-[400px]">
               <FadeLoader color="#244D3F" height={15} width={5} />

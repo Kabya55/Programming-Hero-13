@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router";
 
 const FriendCard = ({ friend }) => {
   return (
     <>
-      <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center flex flex-col items-center justify-center">
+      <Link
+        to={`/friend/${friend.id}`}
+        className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center flex flex-col items-center justify-center"
+      >
         <img
           src={friend.picture}
           alt={friend.name}
@@ -33,7 +37,7 @@ const FriendCard = ({ friend }) => {
               ? "Almost Due"
               : "On Track"}
         </span>
-      </div>
+      </Link>
     </>
   );
 };
