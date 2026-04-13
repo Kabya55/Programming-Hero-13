@@ -37,7 +37,7 @@ const Nav = () => {
         }`
           }
         >
-          <WiTime8 />
+          <WiTime8 size={18} />
           Timeline
         </NavLink>
       </li>
