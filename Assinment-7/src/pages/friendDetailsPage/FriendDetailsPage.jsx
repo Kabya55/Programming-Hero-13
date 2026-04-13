@@ -70,6 +70,17 @@ const FriendDetailsPage = () => {
               {expectedFriend.name}
             </h2>
             <div className="flex flex-col items-center gap-2 mt-2">
+              <div>
+                {expectedFriend.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-[#ecfdf5] text-[#059669] text-sm font-medium mr-3 px-3 py-1 rounded-full mb-2"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
               <span
                 className={`text-xs font-medium px-3 py-1 rounded-full ${
                   expectedFriend.status === "overdue"
@@ -79,15 +90,15 @@ const FriendDetailsPage = () => {
                       : "bg-green-100 text-green-600"
                 }`}
               >
-                {expectedFriend.status.toUpperCase()}
-              </span>
-
-              <span className="bg-emerald-100 text-emerald-700 text-xs px-3 py-1 rounded-full font-medium uppercase">
-                {expectedFriend.tags?.[0] || "No Category"}
+                {expectedFriend.status}
               </span>
             </div>
             <p className="italic text-slate-500 mt-4">
               "{expectedFriend.bio || "No bio added yet."}"
+            </p>
+            <p className="italic text-slate-500 mt-4">
+              <span>Preferred: </span>
+              {expectedFriend.email || "No email added yet."}
             </p>
           </div>
 

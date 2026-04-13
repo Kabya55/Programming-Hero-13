@@ -19,7 +19,6 @@ const Banner = () => {
         </div>
 
         <div className="max-w-6xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Total Friends Card */}
           <div className="bg-white p-10 rounded-xl shadow-sm border border-gray-100 text-center">
             <h2 className="text-4xl font-bold text-[#1e293b] mb-2">10</h2>
             <p className="text-[#64748b] font-medium">Total Friends</p>

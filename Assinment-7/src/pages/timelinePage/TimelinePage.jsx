@@ -40,8 +40,8 @@ const TimelinePage = () => {
                 <li key={option}>
                   <a
                     onClick={() => {
-                      setFilter(option); // ফিল্টার সেট হবে
-                      document.activeElement.blur(); // এই লাইনটি ড্রপডাউন ক্লোজ করে দেবে
+                      setFilter(option);
+                      document.activeElement.blur();
                     }}
                     className={`${filter === option ? "bg-emerald-50 text-[#244D3F] font-bold" : ""}`}
                   >
