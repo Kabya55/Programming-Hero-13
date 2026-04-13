@@ -1,13 +1,16 @@
 import React from "react";
 import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io5";
+import Logo from "../../../assets/logo-xl.png";
 
 const Footer = () => {
   return (
     <>
       <footer className="bg-[#244D3F] text-white py-16">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">KeenKeeper</h1>
+          <div className="flex justify-center items-center mb-5">
+            <img src={Logo} alt="Logo" />
+          </div>
 
           <p className="text-gray-200 text-sm mb-6">
             Your personal shelf of meaningful connections. Browse, tend, and
