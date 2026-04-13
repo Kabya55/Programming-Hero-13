@@ -1,7 +1,7 @@
 import React from "react";
 import FriendCard from "../ui/FriendCard";
 import useFriends from "../../hooks/useFriends";
-import { FadeLoader, ScaleLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 
 const YourFriends = () => {
   const { friends, loading } = useFriends();

@@ -65,9 +65,9 @@ const Nav = () => {
     <>
       <div className="navbar bg-base-100 shadow-sm">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">
+          <NavLink to="/" className="btn btn-ghost text-xl">
             <img src={Logo} alt="Logo" />
-          </a>
+          </NavLink>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">{links}</ul>

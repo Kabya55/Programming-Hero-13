@@ -11,10 +11,14 @@ import {
   Trash2,
 } from "lucide-react";
 import ErorPage from "../erorPage/ErorPage";
+import { toast } from "react-toastify";
+import { useContext } from "react";
+import { InteractionContext } from "../../context/InteractionContext";
 
 const FriendDetailsPage = () => {
   const { id } = useParams();
   const { friends, loading } = useFriends();
+  const { addInteraction } = useContext(InteractionContext);
 
   const expectedFriend = friends.find((f) => f.id === parseInt(id));
 
@@ -30,6 +34,27 @@ const FriendDetailsPage = () => {
   if (!expectedFriend) {
     return <ErorPage></ErorPage>;
   }
+
+  const handleCheckIn = (type) => {
+    const today = new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+    addInteraction(type, expectedFriend);
+
+    toast.success(`${type} with ${expectedFriend.name} at ${today}`, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 p-8 font-sans">
@@ -129,15 +154,24 @@ const FriendDetailsPage = () => {
               Quick Check-In
             </h3>
             <div className="grid grid-cols-3 gap-4">
-              <button className="flex flex-col items-center justify-center p-6 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors group">
+              <button
+                onClick={() => handleCheckIn("Call")}
+                className="flex flex-col items-center justify-center p-6 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors group"
+              >
                 <Phone className="text-slate-700 group-hover:scale-110 transition-transform mb-2" />
                 <span className="text-sm font-medium text-slate-600">Call</span>
               </button>
-              <button className="flex flex-col items-center justify-center p-6 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors group">
+              <button
+                onClick={() => handleCheckIn("Text")}
+                className="flex flex-col items-center justify-center p-6 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors group"
+              >
                 <MessageSquare className="text-slate-700 group-hover:scale-110 transition-transform mb-2" />
                 <span className="text-sm font-medium text-slate-600">Text</span>
               </button>
-              <button className="flex flex-col items-center justify-center p-6 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors group">
+              <button
+                onClick={() => handleCheckIn("Video")}
+                className="flex flex-col items-center justify-center p-6 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors group"
+              >
                 <Video className="text-slate-700 group-hover:scale-110 transition-transform mb-2" />
                 <span className="text-sm font-medium text-slate-600">
                   Video
