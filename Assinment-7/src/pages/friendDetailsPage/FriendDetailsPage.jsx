@@ -10,6 +10,7 @@ import {
   Archive,
   Trash2,
 } from "lucide-react";
+import ErorPage from "../erorPage/ErorPage";
 
 const FriendDetailsPage = () => {
   const { id } = useParams();
@@ -27,7 +28,7 @@ const FriendDetailsPage = () => {
   }
 
   if (!expectedFriend) {
-    return <p className="text-center mt-10">Friend not found!</p>;
+    return <ErorPage></ErorPage>;
   }
 
   return (

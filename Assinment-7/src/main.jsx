@@ -9,6 +9,7 @@ import TimelinePage from "./pages/timelinePage/TimelinePage";
 import FriendDetailsPage from "./pages/friendDetailsPage/FriendDetailsPage";
 import StatsPage from "./pages/statsPage/StatsPage";
 import InteractionProvider from "./context/InteractionContext";
+import ErorPage from "./pages/erorPage/ErorPage";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
         element: <StatsPage></StatsPage>,
       },
     ],
-    // errorElement: <ErorPage></ErorPage>,
+    errorElement: <ErorPage></ErorPage>,
   },
 ]);
 
