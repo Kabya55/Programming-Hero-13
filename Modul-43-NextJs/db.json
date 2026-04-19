@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "brand": "Dell",
+      "price": 65000,
+      "stock": 10,
+      "category": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Smartphone",
+      "brand": "Samsung",
+      "price": 25000,
+      "stock": 20,
+      "category": "Electronics"
+    },
+    {
+      "id": 3,
+      "name": "Headphone",
+      "brand": "Sony",
+      "price": 5000,
+      "stock": 15,
+      "category": "Accessories"
+    },
+    {
+      "id": 4,
+      "name": "Keyboard",
+      "brand": "Logitech",
+      "price": 3000,
+      "stock": 12,
+      "category": "Accessories"
+    },
+    {
+      "id": 5,
+      "name": "Monitor",
+      "brand": "LG",
+      "price": 18000,
+      "stock": 8,
+      "category": "Electronics"
+    }
+  ]
+}
