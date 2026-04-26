@@ -12,7 +12,6 @@ const Nav = () => {
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
   const userAvatar = user?.image || userImg;
-  console.log("Current User Image:", userAvatar);
 
   const handleLogout = async () => {
     await authClient.signOut({

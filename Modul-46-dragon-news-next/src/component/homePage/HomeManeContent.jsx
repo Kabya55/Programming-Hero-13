@@ -56,9 +56,6 @@ const HomeManeContent = ({ news }) => {
 
               <p className="text-gray-500 leading-7">
                 {item.details.slice(0, 180)}...
-                <span className="text-orange-500 font-semibold cursor-pointer ml-1">
-                  Read More
-                </span>
               </p>
 
               {/* Footer */}

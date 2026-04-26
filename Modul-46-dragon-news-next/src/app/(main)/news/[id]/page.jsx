@@ -14,7 +14,6 @@ const NewsDetailsPage = async ({ params }) => {
   const { id } = await params;
 
   const news = await getNewsDetails(id);
-
   return (
     <div className="bg-[#f3f3f3] min-h-screen py-8 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6">
