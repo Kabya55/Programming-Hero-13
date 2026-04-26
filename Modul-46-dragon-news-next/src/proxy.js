@@ -9,16 +9,7 @@ export async function proxy(request) {
   });
 
   if (!session) {
-    // return NextResponse.redirect(new URL("/login", request.url));
-
-    // ১. ইউজার বর্তমানে যে পেজে যাওয়ার চেষ্টা করছে তার URL নিন
-    const currentUrl = request.nextUrl.pathname;
-
-    // ২. লগইন পেজে পাঠানোর সময় callbackUrl হিসেবে বর্তমান পেজটি পাঠিয়ে দিন
-    const loginUrl = new URL("/login", request.url);
-    loginUrl.searchParams.set("callbackUrl", currentUrl);
-
-    return NextResponse.redirect(loginUrl);
+    return NextResponse.redirect(new URL("/login", request.url));
   }
 
   // If the user is authenticated, you can proceed with the request

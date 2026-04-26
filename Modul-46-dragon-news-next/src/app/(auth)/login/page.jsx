@@ -16,6 +16,10 @@ import { authClient } from "@/lib/auth-client";
 
 const LogInPage = () => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const searchParams = useSearchParams();
+  // ইউআরএল থেকে 'callbackUrl' প্যারামিটারটি ধরুন
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -26,7 +30,7 @@ const LogInPage = () => {
       email: userData.email, // required
       password: userData.password, // required
       rememberMe: true,
-      callbackURL: "/category*",
+      callbackURL: callbackUrl,
     });
 
     if (error) {
