@@ -26,7 +26,7 @@ const LogInPage = () => {
       email: userData.email, // required
       password: userData.password, // required
       rememberMe: true,
-      callbackURL: "/",
+      callbackURL: "/category*",
     });
 
     if (error) {

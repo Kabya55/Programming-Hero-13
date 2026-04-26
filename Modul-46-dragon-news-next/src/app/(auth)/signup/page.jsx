@@ -30,7 +30,7 @@ const SignUpPage = () => {
       email: userData.email, // required
       password: userData.password, // required
       image: userData.photo,
-      callbackURL: "/",
+      callbackURL: "  /login",
     });
 
     if (error) {
@@ -38,7 +38,7 @@ const SignUpPage = () => {
     }
     if (data) {
       alert(data.message);
-      router.push("/");
+      router.push("/login");
       router.refresh();
     }
   };
