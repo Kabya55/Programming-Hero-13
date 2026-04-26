@@ -154,3 +154,23 @@ const displayDitale = (word) => {
   document.getElementById("my_modal_5").showModal();
 };
 loadLesson();
+
+// serch functionality
+document.getElementById("btn-serch").addEventListener("click", function () {
+  removeActiveClass();
+  const searchInput = document.getElementById("input-serch");
+  const value = searchInput.value.trim().toLowerCase();
+  if (value === "") {
+    alert("Please enter a word to search");
+    return;
+  }
+  fetch(`https://openapi.programming-hero.com/api/words/all`)
+    .then((response) => response.json())
+    .then((data) => {
+      const allWords = data.data;
+      const filteredWords = allWords.filter((word) =>
+        word.word.toLowerCase().includes(value),
+      );
+      desplayWords(filteredWords);
+    });
+});

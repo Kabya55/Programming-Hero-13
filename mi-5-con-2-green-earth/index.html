@@ -20,7 +20,17 @@
       <div class="col-span-3 border-2 border-gray-300 p-4">
         <h1 class="font-bold pb-3">Categories</h1>
         <div class="space-y-3">
-          <button id="allTree" class="btn btn-success w-full">All Trees</button>
+          <button
+            id="allTree"
+            class="btn btn-success w-full categories-btn"
+            onclick="
+              (loadTrees(),
+                removeActiveClass(),
+                document.getElementById('allTree').classList.add('btn-success'))
+            "
+          >
+            All Trees
+          </button>
           <!-- category container -->
           <div id="category-container" class="space-y-3">
             <!-- <button class="btn btn-success w-full">Success</button>
@@ -64,6 +74,25 @@
 
           <!-- Tree items will be displayed here -->
         </div>
+
+        <!-- modal section start -->
+
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <div id="modal-containner"></div>
+
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+
+        <!-- modal section end -->
       </div>
       <!-- Cart   -->
       <div class="col-span-3 border-2 border-gray-300 p-4">
