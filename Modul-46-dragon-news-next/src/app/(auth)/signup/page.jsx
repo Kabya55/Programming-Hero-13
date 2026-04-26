@@ -30,7 +30,7 @@ const SignUpPage = () => {
       email: userData.email, // required
       password: userData.password, // required
       image: userData.photo,
-      callbackURL: "/login",
+      callbackURL: "/",
     });
 
     if (error) {
