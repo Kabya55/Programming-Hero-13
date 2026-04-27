@@ -13,20 +13,26 @@ import {
 import { Eye, EyeSlash } from "@gravity-ui/icons";
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
+import { useSearchParams } from "next/navigation";
 
 const LogInPage = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const searchParams = useSearchParams();
+
+  // const prevUrl = document.referrer;
+  // console.log(prevUrl);
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
     const userData = Object.fromEntries(formData.entries());
+    const callbackUrl = searchParams.get("callbackUrl") || "/";
 
     const { data, error } = await authClient.signIn.email({
       email: userData.email, // required
       password: userData.password, // required
       rememberMe: true,
-      callbackURL: "/",
+      callbackURL: callbackUrl,
     });
 
     if (error) {

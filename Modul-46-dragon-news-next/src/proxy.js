@@ -9,7 +9,11 @@ export async function proxy(request) {
   });
 
   if (!session) {
-    return NextResponse.redirect(new URL("/login", request.url));
+    // return NextResponse.redirect(new URL("/login", request.url));
+    const loginUrl = new URL("/login", request.url);
+    loginUrl.searchParams.set("callbackUrl", request.url);
+
+    return NextResponse.redirect(loginUrl);
   }
 
   // If the user is authenticated, you can proceed with the request
