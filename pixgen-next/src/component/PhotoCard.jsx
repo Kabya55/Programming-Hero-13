@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const PhotoCard = ({ photo }) => {
@@ -33,9 +34,11 @@ const PhotoCard = ({ photo }) => {
           </div>
 
           {/* Button */}
-          <button className="mt-4 w-full py-2 rounded-full border border-gray-300 bg-white/50 backdrop-blur-md hover:bg-gray-700/70 hover:text-white transition">
-            View
-          </button>
+          <Link href={`/all-photos/${photo.id}`} className="mt-4 block">
+            <button className="mt-4 w-full py-2 rounded-full border border-gray-300 bg-white/50 backdrop-blur-md hover:bg-gray-700/70 hover:text-white transition">
+              View
+            </button>
+          </Link>
         </div>
       </div>
     </>
