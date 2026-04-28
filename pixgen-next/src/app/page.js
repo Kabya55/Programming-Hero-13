@@ -1,11 +1,10 @@
 import Banner from "@/component/Banner";
 import TopGenaration from "@/component/TopGenaration";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <div>
+      <div className="max-w-7xl mx-auto mt-3">
         <Banner />
         <TopGenaration />
       </div>

@@ -11,7 +11,9 @@ const PhotoDetailsPage = async ({ params }) => {
   //   console.log(photo);
   return (
     <>
-      <PhotoDetails photo={photo} />
+      <div className="max-w-7xl mx-auto mt-3">
+        <PhotoDetails photo={photo} />
+      </div>
     </>
   );
 };
