@@ -1,73 +1,83 @@
 "use client";
-import { useState } from "react";
-import { Button } from "@heroui/react";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const baseBtn =
+    "px-3 py-1 rounded-md border border-gray-300 text-gray-700 transition-all duration-200 hover:bg-black hover:text-white hover:border-black";
+
+  const activeBtn = "bg-black text-white";
 
   return (
-    <div className="border-b px-2 relative">
+    <div className="border-b px-2">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
-        {/* Left */}
-        <div className="flex items-center gap-3">
-          {/* Mobile Menu Icon */}
-          <button onClick={() => setOpen(!open)} className="md:hidden text-xl">
-            ☰
-          </button>
-
-          <div>
-            <Link href="/" className="glass-btn flex">
-              <Image src="/logo.png" alt="logo" width={30} height={30} />
-              <h3 className="font-black text-lg">pixgen.</h3>
-            </Link>
-          </div>
+        {/* Logo */}
+        <div className="flex gap-2 items-center">
+          <Image src={"/logo.png"} alt="logo" width={30} height={30} />
+          <h3 className="font-black text-lg">pixgen.</h3>
         </div>
 
-        {/* Middle (Desktop only) */}
-        <ul className="hidden md:flex items-center gap-5 text-sm">
-          <li className="glass-btn px-3 py-2 md:px-6 md:py-3">
-            <Link href="/">Home</Link>
+        {/* Nav Links */}
+        <ul className="flex items-center gap-2 text-sm">
+          <li>
+            <Link
+              href="/"
+              className={`${baseBtn} ${pathname === "/" ? activeBtn : ""}`}
+            >
+              Home
+            </Link>
           </li>
 
-          {["all-photos", "pricing", "profile"].map((item) => (
-            <li key={item} className="glass-btn">
-              <Link href={`/${item}`}>{item.replace("-", " ")}</Link>
-            </li>
-          ))}
+          <li>
+            <Link
+              href="/all-photos"
+              className={`${baseBtn} ${
+                pathname === "/all-photos" ? activeBtn : ""
+              }`}
+            >
+              All Photos
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/pricing"
+              className={`${baseBtn} ${
+                pathname === "/pricing" ? activeBtn : ""
+              }`}
+            >
+              Pricing
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/profile"
+              className={`${baseBtn} ${
+                pathname === "/profile" ? activeBtn : ""
+              }`}
+            >
+              Profile
+            </Link>
+          </li>
         </ul>
 
-        {/* Right side (ALWAYS visible) */}
-        <div className="flex">
-          <ul className="flex items-center gap-2 md:gap-4 text-sm">
-            <li className="glass-btn px-3 py-2 md:px-6 md:py-3">
-              <Link href="/signup">SignUp</Link>
+        {/* Auth Buttons */}
+        <div className="flex gap-2 text-sm">
+          <ul className="flex items-center gap-4  text-sm">
+            <li className="px-3 py-1 rounded-md bg-gray-300 transition-all duration-200 hover:bg-black/70 hover:text-white">
+              <Link href={"/signup"}>SignUp</Link>
             </li>
-            <li className="glass-btn px-3 py-2 md:px-6 md:py-3">
-              <Link href="/signin">SignIn</Link>
+            <li className="px-3 py-1 rounded-md bg-gray-300 transition-all duration-200 hover:bg-black/70 hover:text-white">
+              <Link href={"/signin"}>SignIn</Link>
             </li>
           </ul>
         </div>
       </nav>
-
-      {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden mt-3 flex flex-col gap-3 pb-4">
-          <Link href="/" className="glass-btn">
-            Home
-          </Link>
-          <Link href="/all-photos" className="glass-btn">
-            All Photos
-          </Link>
-          <Link href="/pricing" className="glass-btn">
-            Pricing
-          </Link>
-          <Link href="/profile" className="glass-btn">
-            Profile
-          </Link>
-        </div>
-      )}
     </div>
   );
 };
