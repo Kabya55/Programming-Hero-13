@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+/* globals.css */
+.glass-btn {
+  @apply px-4 py-2 text-black rounded-xl 
+  bg-white/10 backdrop-blur-md 
+  border border-white/20 
+  shadow-lg 
+  hover:bg-white/20 hover:scale-105 
+  transition duration-300;
+}
