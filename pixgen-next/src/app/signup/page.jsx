@@ -21,24 +21,27 @@ const SignUpPage = () => {
   const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
 
+    const formData = new FormData(e.currentTarget);
     const userData = Object.fromEntries(formData.entries());
 
     const { data, error } = await authClient.signUp.email({
-      name: userData.name, // required
-      email: userData.email, // required
-      password: userData.password, // required
+      name: userData.name,
+      email: userData.email,
+      password: userData.password,
       image: userData.photo,
       callbackURL: "/",
     });
 
     if (error) {
-      alert(error.message);
+      console.log(error);
+      alert(error.message || "Signup failed");
+      return;
     }
+
     if (data) {
-      alert(data.message);
-      router.push("/login");
+      console.log("SUCCESS:", data);
+      router.push("/");
       router.refresh();
     }
   };
