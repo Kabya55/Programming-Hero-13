@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400 px-6 md:px-16 py-16">
+    <footer className="bg-black text-gray-400 px-6 md:px-16 py-16 mt-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
           <h1 className="text-6xl md:text-7xl font-bold text-white">
@@ -59,8 +59,8 @@ const Footer = () => {
           <div>
             <h3 className="text-white mb-3 tracking-wide">CONTACT US</h3>
             <ul className="space-y-2">
-              <li>786 901 1622</li>
-              <li>info@wandarland.com</li>
+              <li>+8801750084574</li>
+              <li>kabyakishor017@gmail.com</li>
             </ul>
           </div>
         </div>

@@ -14,6 +14,7 @@ import {
 } from "@heroui/react";
 import { BiEdit } from "react-icons/bi";
 import { useRouter } from "next/navigation";
+import { authClient } from "@/lib/auth-client";
 
 export function EditModal({ data }) {
   const router = useRouter();
@@ -34,13 +35,19 @@ export function EditModal({ data }) {
     const formData = new FormData(e.currentTarget);
     const destination = Object.fromEntries(formData.entries());
 
-    const res = await fetch(`http://localhost:5000/destinations/${_id}`, {
-      method: "PATCH",
-      headers: {
-        "content-type": "application/json",
+    // Get the token from the client-side session
+    const { data: tokenData } = await authClient.token();
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/destinations/${_id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${tokenData?.token}`,
+        },
+        body: JSON.stringify(destination),
       },
-      body: JSON.stringify(destination),
-    });
+    );
 
     const data = await res.json();
     console.log(data);

@@ -1,9 +1,8 @@
 import DestinationCard from "@/component/DestinationCard";
 
 const DestinationsPage = async () => {
-  const res = await fetch("http://localhost:5000/destinations");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/destinations`);
   const data = await res.json();
-  console.log(data);
   return (
     <>
       <div className="max-w-7xl mx-auto mb-5">

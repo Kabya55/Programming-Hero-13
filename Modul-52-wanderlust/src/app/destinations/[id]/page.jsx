@@ -1,14 +1,25 @@
+import BookingCard from "@/component/BookingCard";
 import { DeleteAlert } from "@/component/DeleteAlert";
 import { EditModal } from "@/component/EditModal";
-import { Button } from "@heroui/react";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 import Image from "next/image";
-import { BiEdit } from "react-icons/bi";
 import { FaRegCalendar } from "react-icons/fa6";
 import { LuMapPin } from "react-icons/lu";
 
 const DestinationDetailsPage = async ({ params }) => {
   const { id } = await params;
-  const res = await fetch(`http://localhost:5000/destinations/${id}`);
+  const { token } = await auth.api.getToken({
+    headers: await headers(),
+  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_SERVER_URL}/destinations/${id}`,
+    {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    },
+  );
   const data = await res.json();
   const { imageUrl, price, destinationName, duration, country, description } =
     data;
@@ -27,28 +38,31 @@ const DestinationDetailsPage = async ({ params }) => {
           width={800}
         />
 
-        <div className="p-2">
-          <div className="flex items-center gap-1">
-            <LuMapPin /> <span>{country}</span>
-          </div>
-          <div className="flex justify-between">
-            <div>
+        <div className="grid md:grid-cols-2 gap-2">
+          <div className="p-2 mt-5">
+            <div className="flex items-center gap-1">
+              <LuMapPin /> <span>{country}</span>
+            </div>
+            <div className="flex justify-between">
               <div>
-                <h2 className="text-xl font-bold">{destinationName}</h2>
+                <div>
+                  <h2 className="text-xl font-bold">{destinationName}</h2>
+                </div>
+                <div className="flex gap-1 items-center">
+                  <FaRegCalendar /> {duration}
+                </div>
               </div>
-              <div className="flex gap-1 items-center">
-                <FaRegCalendar /> {duration}
+
+              <div>
+                <h3 className="text-2xl font-bold">$ {price}</h3>
               </div>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold">$ {price}</h3>
-            </div>
+            <h1 className="mt-10 text-2xl font-bold">Overview</h1>
+
+            <p>{description}</p>
           </div>
-
-          <h1 className="mt-10 text-2xl font-bold">Overview</h1>
-
-          <p>{description}</p>
+          <BookingCard data={data} />
         </div>
       </div>
     </>
